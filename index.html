@@ -33,12 +33,43 @@
         header p {
             font-size: 1.2em;
         }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #27ae60;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 15px 20px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #fff;
+        }
         .hero {
             text-align: center;
             padding: 60px;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 12px;
-            margin-top: 30px;
+            margin-top: 80px; /* To compensate for the fixed nav */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .hero h1 {
@@ -110,11 +141,21 @@
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#hero">ホーム</a></li>
+            <li><a href="#about">生成型AI教育塾とは</a></li>
+            <li><a href="#reviews">受講者の声</a></li>
+            <li><a href="#request">資料請求</a></li>
+            <li><a href="#consultation">オンライン相談</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+        </ul>
+    </nav>
     <header>
         <h1>生成型AI教育塾</h1>
         <p>未来を創るAI教育のスタート</p>
     </header>
-    <section class="hero">
+    <section class="hero" id="hero">
         <h1>想像していることが「ゲンジツ」に</h1>
         <p>頭の中に描いたものは、まだ形がないだけ。でもAIとならば、君だけのゲンジツとなる。</p>
         <a href="#request" class="cta-button">資料請求はこちら</a>
