@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホーム | 生成型AI教育塾</title>
+    <title>生成型AI教育塾 | ホーム</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,98 +11,90 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-        }
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #27ae60;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        nav .menu {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
         }
-        nav .menu .logo {
-            font-size: 24px;
+        .sidebar {
+            width: 30%;
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
             color: white;
+            padding: 20px;
+            box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h1 {
+            font-size: 28px;
             font-weight: bold;
-            text-decoration: none;
+            margin-bottom: 20px;
         }
-        nav .menu ul {
+        .sidebar ul {
             list-style: none;
-            margin: 0;
             padding: 0;
-            display: flex;
         }
-        nav .menu ul li {
-            margin: 0 10px;
+        .sidebar ul li {
+            margin-bottom: 10px;
         }
-        nav .menu ul li a {
+        .sidebar ul li a {
             text-decoration: none;
             color: white;
             font-size: 16px;
             font-weight: bold;
             transition: color 0.3s ease;
         }
-        nav .menu ul li a:hover {
+        .sidebar ul li a:hover {
             color: #000;
         }
-        .hero {
+        .cta-button {
+            display: block;
+            background: yellow;
+            color: #333;
             text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://via.placeholder.com/1920x1080');
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .cta-button:hover {
+            background: #f4d03f;
+        }
+        .content {
+            width: 70%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://via.placeholder.com/1920x1080');
             background-size: cover;
             background-position: center;
         }
-        .hero h1 {
-            font-size: 48px;
-            color: #27ae60;
+        .content h2 {
+            font-size: 36px;
+            color: #333;
             margin-bottom: 20px;
         }
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-        .cta-button {
-            display: inline-block;
-            background: #27ae60;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: background 0.3s ease;
-            margin: 10px;
-        }
-        .cta-button:hover {
-            background: #2ecc71;
+        .content p {
+            font-size: 20px;
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="menu">
-            <a href="index.html" class="logo">生成型AI教育塾</a>
-            <ul>
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="about.html">生成型AI教育塾とは</a></li>
-                <li><a href="reviews.html">受講者の声</a></li>
-                <li><a href="request.html">資料請求</a></li>
-                <li><a href="consultation.html">オンライン相談</a></li>
-                <li><a href="faq.html">よくある質問</a></li>
-            </ul>
-        </div>
-    </nav>
-    <section class="hero">
-        <h1>想像していることが「ゲンジツ」に</h1>
-        <p>頭の中に描いたものは、まだ形がないだけ。でもAIとならば、君だけのゲンジツとなる。</p>
-        <a href="request.html" class="cta-button">資料請求はこちら</a>
-        <a href="consultation.html" class="cta-button">オンライン相談</a>
-    </section>
+    <div class="sidebar">
+        <h1>Hero's プログラミング</h1>
+        <ul>
+            <li><a href="about.html">教室について</a></li>
+            <li><a href="courses.html">コース概要</a></li>
+            <li><a href="classroom.html">教室案内</a></li>
+            <li><a href="interviews.html">体験者インタビュー</a></li>
+            <li><a href="blog.html">ブログ</a></li>
+            <li><a href="faq.html">よくあるご質問</a></li>
+        </ul>
+        <a href="trial.html" class="cta-button">体験会募集中<br>ご予約はこちら</a>
+    </div>
+    <div class="content">
+        <h2>楽しい！が未来につながる</h2>
+        <p>子どもたちが楽しみながら学べるプログラミング教室</p>
+    </div>
 </body>
 </html>
