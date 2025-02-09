@@ -13,6 +13,7 @@
             background-image: url('/mnt/data/A_simple_and_clean_background_image_featuring_a_yo.png');
             background-size: cover;
             background-position: center;
+            color: #333;
         }
         .container {
             width: 80%;
@@ -20,20 +21,34 @@
             overflow: hidden;
         }
         header {
-            background: #2ecc71;
+            background: linear-gradient(90deg, #27ae60, #2ecc71);
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
         }
         .hero {
             text-align: center;
-            padding: 50px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            margin-top: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .hero h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #27ae60;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
         }
         .cta-button {
             display: inline-block;
@@ -41,15 +56,56 @@
             color: white;
             padding: 15px 30px;
             text-decoration: none;
-            font-size: 20px;
-            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background 0.3s ease;
             margin: 10px;
         }
+        .cta-button:hover {
+            background: #2ecc71;
+        }
         .features, .reviews, .faq {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             padding: 40px;
-            margin: 20px auto;
-            border-radius: 10px;
+            margin: 30px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .features h2, .reviews h2, .faq h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #27ae60;
+        }
+        .features p, .reviews p, .faq p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .faq h3 {
+            font-size: 22px;
+            margin-top: 30px;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        form input, form textarea, form button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            background: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        form button:hover {
+            background: #2ecc71;
         }
     </style>
 </head>
@@ -61,22 +117,59 @@
     <section class="hero">
         <h1>想像していることが「ゲンジツ」に</h1>
         <p>頭の中に描いたものは、まだ形がないだけ。でもAIとならば、君だけのゲンジツとなる。</p>
-        <a href="#contact" class="cta-button">資料請求はこちら</a>
+        <a href="#request" class="cta-button">資料請求はこちら</a>
         <a href="#consultation" class="cta-button">オンライン相談</a>
     </section>
-    <section class="features container">
+    <section id="about" class="features container">
         <h2>生成型AI教育塾とは？</h2>
-        <p>お子様のレベル、学年ごとに合わせた少人数制セミプライベートレッスン。AIを活用したWebページ作成やゲーム制作など、これから必要となるスキルを楽しく学べます。</p>
+        <p>生成型AI教育塾は、お子様のレベル、学年ごとに合わせた少人数制セミプライベートレッスンを提供します。AIを活用したWebページ作成やゲーム制作など、これから必要となるスキルを楽しく学べます。</p>
     </section>
-    <section class="reviews container">
+    <section id="reviews" class="reviews container">
         <h2>受講者の声</h2>
-        <p>Kさん（お母さん）：子供が楽しみながら学べる環境で安心です！</p>
-        <p>Aさん（中学生）：自分でAIを作れるようになって、自信がつきました！</p>
+        <p><strong>Kさん（お母さん）：</strong> 子供が楽しみながら学べる環境で安心です！</p>
+        <p><strong>Aさん（中学生）：</strong> 自分でAIを作れるようになって、自信がつきました！</p>
     </section>
-    <section class="faq container">
+    <section id="request" class="features container">
+        <h2>資料請求フォーム</h2>
+        <form>
+            <label for="name">お名前:</label>
+            <input type="text" id="name" name="name" placeholder="お名前を入力してください" required>
+
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" placeholder="メールアドレスを入力してください" required>
+
+            <label for="message">ご質問やご要望:</label>
+            <textarea id="message" name="message" rows="5" placeholder="ご質問やご要望を入力してください"></textarea>
+
+            <button type="submit">送信</button>
+        </form>
+    </section>
+    <section id="consultation" class="faq container">
+        <h2>オンライン相談予約</h2>
+        <form>
+            <label for="date">希望日:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">希望時間:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="topic">相談内容:</label>
+            <textarea id="topic" name="topic" rows="5" placeholder="相談内容を簡単に入力してください"></textarea>
+
+            <button type="submit">予約する</button>
+        </form>
+    </section>
+    <section id="faq" class="faq container">
         <h2>よくある質問</h2>
-        <p><strong>Q1: どんなプログラミングが学べますか？</strong></p>
-        <p>A1: AIを活用したPythonのプログラミング、データ分析、機械学習などを学べます。</p>
+        <p><strong>❓ Q1. この塾ではどんなプログラミングが学べますか？</strong></p>
+        <p>✅ A1. AIを活用したプログラミングを中心に学べます。具体的には、Pythonを使った機械学習・データ分析、チャットボット開発、画像認識AIの構築など、実践的な内容をカバーしています。</p>
+        <p><strong>❓ Q2. まったくの初心者でも参加できますか？</strong></p>
+        <p>✅ A2. はい、初心者向けのカリキュラムも用意しています。プログラミングの基礎から、AI開発に必要なPythonの基本文法、データの扱い方まで丁寧に指導します。</p>
+        <p><strong>❓ Q3. 授業はどのように行われますか？</strong></p>
+        <p>✅ A3. 授業はオンラインで実施され、リアルタイム授業（ライブ配信）と録画授業の両方を提供しています。質問対応はAIアシスタント＋講師のダブルサポート体制です。</p>
+        <p><strong>❓ Q4. 修了後はどんなスキルが身につきますか？</strong></p>
+        <p>✅ A4. Pythonプログラミングの基礎はもちろん、AIの基本的な仕組み、データ処理、機械学習モデルの構築などができるようになります。</p>
+        <p><strong>📌 その他の質問があればお気軽にお問い合わせください！</strong></p>
     </section>
 </body>
 </html>
