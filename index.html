@@ -1,33 +1,139 @@
-<!-- ▼ Header（共通）: header.htmlや各ページに直接組み込み -->
-<header class="site-header">
-  <div class="header-inner">
-    <div class="logo">
-      <!-- ロゴ画像を配置 -->
-      <a href="index.html">
-        <img src="assets/images/logo.png" alt="BIG JUMPロゴ">
-      </a>
-    </div>
-    <nav class="global-nav">
-      <ul>
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="service.html">サービス概要</a></li>
-        <li><a href="case.html">導入事例</a></li>
-        <li><a href="price.html">料金表</a></li>
-        <!-- CTAボタンをナビの最後に配置 -->
-        <li class="nav-cta"><a href="contact.html">お問い合わせ</a></li>
-      </ul>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIG JUMP | ホーム</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(45deg, #007bff, #5a9bf6);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            font-family: 'DotGothic16', sans-serif;
+        }
+        header p {
+            margin: 5px 0 0;
+        }
+        nav {
+            background: #f4f4f4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #007bff;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+            padding: 100px 20px;
+        }
+        .hero h2 {
+            font-size: 48px;
+            margin: 0 0 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin: 0 0 30px;
+        }
+        .hero a {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .hero a:hover {
+            background: #0056b3;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section h2 {
+            font-size: 32px;
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        footer {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BIG JUMP</h1>
+        <p>想像していることが「ゲンジツ」に</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">サービス概要</a></li>
+            <li><a href="cases.html">導入事例</a></li>
+            <li><a href="pricing.html">料金表</a></li>
+            <li><a href="request.html">資料請求</a></li>
+            <li><a href="consultation.html">無料相談</a></li>
+            <li><a href="faq.html">よくある質問</a></li>
+        </ul>
     </nav>
-  </div>
-</header>
-
-<!-- ▼ Footer（共通）: footer.htmlや各ページに直接組み込み -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <p>&copy; 2025 BIG JUMP</p>
-    <!-- SNSシェアアイコン（リンクはダミー） -->
-    <div class="sns-share">
-      <a href="#"><img src="assets/images/icon_twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="assets/images/icon_instagram.png" alt="Instagram"></a>
+    <div class="hero">
+        <h2>未来を創るプログラミング塾</h2>
+        <p>AIを活用した新感覚の教育で、お子さまの可能性を広げます。</p>
+        <a href="request.html">資料請求はこちら</a>
+        <a href="consultation.html">無料相談を申し込む</a>
     </div>
-  </div>
-</footer>
+    <section>
+        <h2>BIG JUMPとは</h2>
+        <p>株式会社スクールメールサービスと株式会社ソーシャルデータバンクの提携で行うAIを使った新感覚プログラミング塾です。優秀な講師がお子様一人ひとりに寄り添い、お子様の「もっとやりたい」を引き立ててくれます。</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 BIG JUMP. All rights reserved.</p>
+    </footer>
+</body>
+</html>
