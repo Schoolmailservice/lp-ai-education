@@ -1,107 +1,33 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>コース概要 | Hero's プログラミング</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: linear-gradient(45deg, #27ae60, #2ecc71);
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 36px;
-            margin: 0;
-        }
-        header p {
-            margin: 5px 0 0;
-        }
-        nav {
-            background: #f4f4f4;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #27ae60;
-        }
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-        .content h2 {
-            font-size: 32px;
-            color: #27ae60;
-            margin-bottom: 20px;
-        }
-        .content p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin: 0 auto;
-            max-width: 800px;
-        }
-        footer {
-            background: #f4f4f4;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        footer p {
-            margin: 0;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Hero's プログラミング</h1>
-        <p>楽しい！が未来につながる</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="about.html">教室について</a></li>
-            <li><a href="courses.html">コース概要</a></li>
-            <li><a href="classroom.html">教室案内</a></li>
-            <li><a href="interviews.html">体験者インタビュー</a></li>
-            <li><a href="blog.html">ブログ</a></li>
-            <li><a href="faq.html">よくあるご質問</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <h2>コース概要</h2>
-        <p>Hero's プログラミング教室では、初心者から上級者まで対応する多様なコースをご用意しています。それぞれのお子さまのレベルや興味に合わせて、柔軟にカリキュラムを組み立てます。</p>
-        <ul style="text-align: left; margin: 0 auto; max-width: 800px;">
-            <li><strong>初級コース:</strong> プログラミングの基礎を学び、簡単なゲームやアプリを作成します。</li>
-            <li><strong>中級コース:</strong> データ構造やアルゴリズムに触れ、応用的なプログラム作成に挑戦します。</li>
-            <li><strong>上級コース:</strong> AIや機械学習の基礎を学び、実際のプロジェクトを通してスキルを磨きます。</li>
-        </ul>
+<!-- ▼ Header（共通）: header.htmlや各ページに直接組み込み -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <!-- ロゴ画像を配置 -->
+      <a href="index.html">
+        <img src="assets/images/logo.png" alt="BIG JUMPロゴ">
+      </a>
     </div>
-    <footer>
-        <p>&copy; 2025 Hero's プログラミング. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+    <nav class="global-nav">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="service.html">サービス概要</a></li>
+        <li><a href="case.html">導入事例</a></li>
+        <li><a href="price.html">料金表</a></li>
+        <!-- CTAボタンをナビの最後に配置 -->
+        <li class="nav-cta"><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ▼ Footer（共通）: footer.htmlや各ページに直接組み込み -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2025 BIG JUMP</p>
+    <!-- SNSシェアアイコン（リンクはダミー） -->
+    <div class="sns-share">
+      <a href="#"><img src="assets/images/icon_twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="assets/images/icon_instagram.png" alt="Instagram"></a>
+    </div>
+  </div>
+</footer>
