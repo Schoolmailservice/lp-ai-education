@@ -10,28 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            background-image: url('/mnt/data/A_simple_and_clean_background_image_featuring_a_yo.png');
-            background-size: cover;
-            background-position: center;
             color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: linear-gradient(90deg, #27ae60, #2ecc71);
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
         }
         nav {
             position: fixed;
@@ -41,41 +20,77 @@
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        nav ul {
+        nav .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        nav .menu .logo {
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        nav .menu ul {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: space-around;
-            align-items: center;
         }
-        nav ul li {
-            display: inline;
+        nav .menu ul li {
+            margin: 0 10px;
         }
-        nav ul li a {
+        nav .menu ul li a {
             text-decoration: none;
-            color: #000;
+            color: white;
             font-size: 16px;
             font-weight: bold;
-            padding: 15px 20px;
-            display: inline-block;
             transition: color 0.3s ease;
         }
-        nav ul li a:hover {
-            color: #fff;
+        nav .menu ul li a:hover {
+            color: #000;
+        }
+        nav .menu .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        nav .menu .hamburger div {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 5px;
+        }
+        @media (max-width: 768px) {
+            nav .menu ul {
+                display: none;
+                flex-direction: column;
+                background: #27ae60;
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                width: 200px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            nav .menu ul.active {
+                display: flex;
+            }
+            nav .menu .hamburger {
+                display: block;
+            }
         }
         .hero {
             text-align: center;
-            padding: 60px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 12px;
-            margin-top: 80px; /* To compensate for the fixed nav */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 100px 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://via.placeholder.com/1920x1080');
+            background-size: cover;
+            background-position: center;
         }
         .hero h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
+            font-size: 48px;
             color: #27ae60;
+            margin-bottom: 20px;
         }
         .hero p {
             font-size: 18px;
@@ -96,81 +111,60 @@
         .cta-button:hover {
             background: #2ecc71;
         }
-        .features, .reviews, .faq {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
+        section {
+            padding: 60px 20px;
             margin: 30px auto;
-            border-radius: 12px;
+            background: white;
+            border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
         }
-        .features h2, .reviews h2, .faq h2 {
+        section h2 {
             font-size: 28px;
-            margin-bottom: 20px;
             color: #27ae60;
+            margin-bottom: 20px;
         }
-        .features p, .reviews p, .faq p {
+        section p {
             font-size: 16px;
             line-height: 1.8;
-        }
-        .faq h3 {
-            font-size: 22px;
-            margin-top: 30px;
-            color: #333;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        form input, form textarea, form button {
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        form button {
-            background: #27ae60;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        form button:hover {
-            background: #2ecc71;
         }
     </style>
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="#hero">ホーム</a></li>
-            <li><a href="#about">生成型AI教育塾とは</a></li>
-            <li><a href="#reviews">受講者の声</a></li>
-            <li><a href="#request">資料請求</a></li>
-            <li><a href="#consultation">オンライン相談</a></li>
-            <li><a href="#faq">よくある質問</a></li>
-        </ul>
+        <div class="menu">
+            <a href="#" class="logo">生成型AI教育塾</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li><a href="#hero">ホーム</a></li>
+                <li><a href="#about">生成型AI教育塾とは</a></li>
+                <li><a href="#reviews">受講者の声</a></li>
+                <li><a href="#request">資料請求</a></li>
+                <li><a href="#consultation">オンライン相談</a></li>
+                <li><a href="#faq">よくある質問</a></li>
+            </ul>
+        </div>
     </nav>
-    <header>
-        <h1>生成型AI教育塾</h1>
-        <p>未来を創るAI教育のスタート</p>
-    </header>
     <section class="hero" id="hero">
         <h1>想像していることが「ゲンジツ」に</h1>
         <p>頭の中に描いたものは、まだ形がないだけ。でもAIとならば、君だけのゲンジツとなる。</p>
         <a href="#request" class="cta-button">資料請求はこちら</a>
         <a href="#consultation" class="cta-button">オンライン相談</a>
     </section>
-    <section id="about" class="features container">
+    <section id="about">
         <h2>生成型AI教育塾とは？</h2>
         <p>生成型AI教育塾は、お子様のレベル、学年ごとに合わせた少人数制セミプライベートレッスンを提供します。AIを活用したWebページ作成やゲーム制作など、これから必要となるスキルを楽しく学べます。</p>
     </section>
-    <section id="reviews" class="reviews container">
+    <section id="reviews">
         <h2>受講者の声</h2>
-        <p><strong>Kさん（お母さん）：</strong> 子供が楽しみながら学べる環境で安心です！</p>
-        <p><strong>Aさん（中学生）：</strong> 自分でAIを作れるようになって、自信がつきました！</p>
+        <p><strong>Kさん（お母さん）:</strong> 子供が楽しみながら学べる環境で安心です！</p>
+        <p><strong>Aさん（中学生）:</strong> 自分でAIを作れるようになって、自信がつきました！</p>
     </section>
-    <section id="request" class="features container">
+    <section id="request">
         <h2>資料請求フォーム</h2>
         <form>
             <label for="name">お名前:</label>
@@ -185,7 +179,7 @@
             <button type="submit">送信</button>
         </form>
     </section>
-    <section id="consultation" class="faq container">
+    <section id="consultation">
         <h2>オンライン相談予約</h2>
         <form>
             <label for="date">希望日:</label>
@@ -200,7 +194,7 @@
             <button type="submit">予約する</button>
         </form>
     </section>
-    <section id="faq" class="faq container">
+    <section id="faq">
         <h2>よくある質問</h2>
         <p><strong>❓ Q1. この塾ではどんなプログラミングが学べますか？</strong></p>
         <p>✅ A1. AIを活用したプログラミングを中心に学べます。具体的には、Pythonを使った機械学習・データ分析、チャットボット開発、画像認識AIの構築など、実践的な内容をカバーしています。</p>
@@ -212,6 +206,11 @@
         <p>✅ A4. Pythonプログラミングの基礎はもちろん、AIの基本的な仕組み、データ処理、機械学習モデルの構築などができるようになります。</p>
         <p><strong>📌 その他の質問があればお気軽にお問い合わせください！</strong></p>
     </section>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('nav .menu ul');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
-
