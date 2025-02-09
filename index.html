@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>生成型AI教育塾 | 資料請求・オンライン相談</title>
+    <title>ホーム | 生成型AI教育塾</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,35 +51,6 @@
         nav .menu ul li a:hover {
             color: #000;
         }
-        nav .menu .hamburger {
-            display: none;
-            cursor: pointer;
-        }
-        nav .menu .hamburger div {
-            width: 25px;
-            height: 3px;
-            background: white;
-            margin: 5px;
-        }
-        @media (max-width: 768px) {
-            nav .menu ul {
-                display: none;
-                flex-direction: column;
-                background: #27ae60;
-                position: absolute;
-                top: 50px;
-                right: 20px;
-                width: 200px;
-                border-radius: 8px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            }
-            nav .menu ul.active {
-                display: flex;
-            }
-            nav .menu .hamburger {
-                display: block;
-            }
-        }
         .hero {
             text-align: center;
             padding: 100px 20px;
@@ -111,106 +82,27 @@
         .cta-button:hover {
             background: #2ecc71;
         }
-        section {
-            padding: 60px 20px;
-            margin: 30px auto;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
-        }
-        section h2 {
-            font-size: 28px;
-            color: #27ae60;
-            margin-bottom: 20px;
-        }
-        section p {
-            font-size: 16px;
-            line-height: 1.8;
-        }
     </style>
 </head>
 <body>
     <nav>
         <div class="menu">
-            <a href="#" class="logo">生成型AI教育塾</a>
-            <div class="hamburger" onclick="toggleMenu()">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+            <a href="index.html" class="logo">生成型AI教育塾</a>
             <ul>
-                <li><a href="#hero">ホーム</a></li>
-                <li><a href="#about">生成型AI教育塾とは</a></li>
-                <li><a href="#reviews">受講者の声</a></li>
-                <li><a href="#request">資料請求</a></li>
-                <li><a href="#consultation">オンライン相談</a></li>
-                <li><a href="#faq">よくある質問</a></li>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="about.html">生成型AI教育塾とは</a></li>
+                <li><a href="reviews.html">受講者の声</a></li>
+                <li><a href="request.html">資料請求</a></li>
+                <li><a href="consultation.html">オンライン相談</a></li>
+                <li><a href="faq.html">よくある質問</a></li>
             </ul>
         </div>
     </nav>
-    <section class="hero" id="hero">
+    <section class="hero">
         <h1>想像していることが「ゲンジツ」に</h1>
         <p>頭の中に描いたものは、まだ形がないだけ。でもAIとならば、君だけのゲンジツとなる。</p>
-        <a href="#request" class="cta-button">資料請求はこちら</a>
-        <a href="#consultation" class="cta-button">オンライン相談</a>
+        <a href="request.html" class="cta-button">資料請求はこちら</a>
+        <a href="consultation.html" class="cta-button">オンライン相談</a>
     </section>
-    <section id="about">
-        <h2>生成型AI教育塾とは？</h2>
-        <p>生成型AI教育塾は、お子様のレベル、学年ごとに合わせた少人数制セミプライベートレッスンを提供します。AIを活用したWebページ作成やゲーム制作など、これから必要となるスキルを楽しく学べます。</p>
-    </section>
-    <section id="reviews">
-        <h2>受講者の声</h2>
-        <p><strong>Kさん（お母さん）:</strong> 子供が楽しみながら学べる環境で安心です！</p>
-        <p><strong>Aさん（中学生）:</strong> 自分でAIを作れるようになって、自信がつきました！</p>
-    </section>
-    <section id="request">
-        <h2>資料請求フォーム</h2>
-        <form>
-            <label for="name">お名前:</label>
-            <input type="text" id="name" name="name" placeholder="お名前を入力してください" required>
-
-            <label for="email">メールアドレス:</label>
-            <input type="email" id="email" name="email" placeholder="メールアドレスを入力してください" required>
-
-            <label for="message">ご質問やご要望:</label>
-            <textarea id="message" name="message" rows="5" placeholder="ご質問やご要望を入力してください"></textarea>
-
-            <button type="submit">送信</button>
-        </form>
-    </section>
-    <section id="consultation">
-        <h2>オンライン相談予約</h2>
-        <form>
-            <label for="date">希望日:</label>
-            <input type="date" id="date" name="date" required>
-
-            <label for="time">希望時間:</label>
-            <input type="time" id="time" name="time" required>
-
-            <label for="topic">相談内容:</label>
-            <textarea id="topic" name="topic" rows="5" placeholder="相談内容を簡単に入力してください"></textarea>
-
-            <button type="submit">予約する</button>
-        </form>
-    </section>
-    <section id="faq">
-        <h2>よくある質問</h2>
-        <p><strong>❓ Q1. この塾ではどんなプログラミングが学べますか？</strong></p>
-        <p>✅ A1. AIを活用したプログラミングを中心に学べます。具体的には、Pythonを使った機械学習・データ分析、チャットボット開発、画像認識AIの構築など、実践的な内容をカバーしています。</p>
-        <p><strong>❓ Q2. まったくの初心者でも参加できますか？</strong></p>
-        <p>✅ A2. はい、初心者向けのカリキュラムも用意しています。プログラミングの基礎から、AI開発に必要なPythonの基本文法、データの扱い方まで丁寧に指導します。</p>
-        <p><strong>❓ Q3. 授業はどのように行われますか？</strong></p>
-        <p>✅ A3. 授業はオンラインで実施され、リアルタイム授業（ライブ配信）と録画授業の両方を提供しています。質問対応はAIアシスタント＋講師のダブルサポート体制です。</p>
-        <p><strong>❓ Q4. 修了後はどんなスキルが身につきますか？</strong></p>
-        <p>✅ A4. Pythonプログラミングの基礎はもちろん、AIの基本的な仕組み、データ処理、機械学習モデルの構築などができるようになります。</p>
-        <p><strong>📌 その他の質問があればお気軽にお問い合わせください！</strong></p>
-    </section>
-    <script>
-        function toggleMenu() {
-            const menu = document.querySelector('nav .menu ul');
-            menu.classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
